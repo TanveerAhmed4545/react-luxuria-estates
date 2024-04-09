@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -96,7 +96,7 @@ const Navbar = () => {
 
 
 
-    <a className="btn bg-[#AACBFF] font-bold text-[#007CFF]">Login</a>
+    <Link to='/login'><button className="btn bg-[#AACBFF] font-bold text-[#007CFF]">Login</button></Link>
   </div>
 </div>
     );

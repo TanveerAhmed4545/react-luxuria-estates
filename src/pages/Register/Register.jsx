@@ -5,6 +5,7 @@ import { updateProfile } from "firebase/auth";
 import { toast } from 'react-toastify';
 import { FaEyeSlash } from "react-icons/fa";
 import { IoMdEye } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 
 const Register = () => {
@@ -52,6 +53,7 @@ const Register = () => {
          })
          .catch(error=>{
            console.log(error);
+           error && toast.warn("Error , not registered");
          })
         }
     
@@ -60,14 +62,14 @@ const Register = () => {
         <div>
             <div className="hero min-h-screen bg-[#dbe7f9] rounded-xl">
   <div className="hero-content  flex-col lg:flex-row-reverse">
-    <div className="text-center lg:text-left">
-      <h1 className="text-5xl font-bold mb-6 lg:mb-10 text-[#007CFF]">Register now </h1>
-      <div className=" max-w-[600px]">
+    <div className="text-center lg:text-left  lg:ml-10">
+      <h1 className="text-5xl font-bold mb-6 lg:mb-8 text-[#007CFF]">Register now </h1>
+      <div className=" max-w-[600px] md:max-w-md lg:max-w-[600px]">
         <img className="rounded-2xl" src={"https://i.ibb.co/KXk84XP/reg.jpg"}  />
       </div>
     </div>
     <div className="card shrink-0 w-full max-w-md shadow-2xl bg-[#AACBFF]">
-      <form className="card-body" onSubmit={handleSubmit(onSubmit)} >
+      <form className="card-body pb-0" onSubmit={handleSubmit(onSubmit)} >
         <div className="form-control">
           <label className="label">
             <span className="label-text">Name</span>
@@ -92,7 +94,7 @@ const Register = () => {
           <input type="email" placeholder="email" className="input input-bordered" 
           {...register("email", { required: true })}
           />
-          {errors.name && <span className="text-red-500 font-semibold pt-2">This Email field is required</span>}
+          {errors.email && <span className="text-red-500 font-semibold pt-2">This Email field is required</span>}
         </div>
         <div className="form-control">
           <label className="label">
@@ -115,6 +117,9 @@ const Register = () => {
           <button className="btn bg-[#007CFF] border-none text-white">Register</button>
         </div>
       </form>
+      <div className="text-center py-4">
+     <p>Already have an account <Link className="text-blue-600 font-bold" to='/login'>Login</Link></p>
+     </div>
     </div>
   </div>
 </div>
