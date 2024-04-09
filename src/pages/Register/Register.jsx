@@ -1,12 +1,19 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { useForm } from "react-hook-form";
 import { updateProfile } from "firebase/auth";
+import { toast } from 'react-toastify';
+import { FaEyeSlash } from "react-icons/fa";
+import { IoMdEye } from "react-icons/io";
 
 
 const Register = () => {
     const {createUser} = useContext(AuthContext);
     // console.log(createUser);
+      
+    // showPassword
+    const [showPassword,setShowPassword] = useState(false);
+
 
 
     const {
@@ -30,6 +37,7 @@ const Register = () => {
          createUser(data.email,data.password)
          .then(result =>{
             console.log(result.user);
+            result.user && toast.success("Success");
 
             updateProfile(result.user,{
                 displayName: data.name,
@@ -90,9 +98,16 @@ const Register = () => {
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="password" placeholder="password" className="input input-bordered" 
+          <div className="w-full relative">
+          <input  type={showPassword ? 'text' :"password" } placeholder="password" className="w-full input input-bordered" 
           {...register("password", { required: true })}
           />
+          <span className="absolute top-3 right-2"  onClick={() => setShowPassword(!showPassword)}>
+                    {
+                        showPassword ?  <FaEyeSlash></FaEyeSlash>  : <IoMdEye></IoMdEye> 
+                    }
+                </span>
+          </div>
           {errors.password && <span className="text-red-500 font-semibold pt-2">This Password field is required</span>}
          
         </div>
