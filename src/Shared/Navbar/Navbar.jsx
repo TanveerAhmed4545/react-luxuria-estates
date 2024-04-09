@@ -12,25 +12,27 @@ const Navbar = () => {
     const links = <>
     <li><NavLink  to='/'  className={({ isActive, isPending }) =>
          isActive
-           ? "bg-none border text-[#23BE0A] font-semibold border-[#23BE0A] mr-3"
+           ? "bg-none border text-[#007CFF] font-semibold border-[#AACBFF] mr-3"
            : isPending
            ? "pending"
            : "mr-3"
        }>Home</NavLink></li>
        <li><NavLink  to='/profile'  className={({ isActive, isPending }) =>
          isActive
-           ? "bg-none border text-[#23BE0A] font-semibold border-[#23BE0A] mr-3"
+           ? "bg-none border text-[#007CFF] font-semibold border-[#AACBFF] mr-3"
            : isPending
            ? "pending"
            : "mr-3"
        }>Update Profile</NavLink></li>
        <li><NavLink to='/contact'  className={({ isActive, isPending }) =>
          isActive
-           ? "bg-none border text-[#23BE0A] font-semibold border-[#23BE0A] mr-3"
+           ? "bg-none border text-[#007CFF] font-semibold border-[#AACBFF] mr-3"
            : isPending
            ? "pending"
            : "mr-3"
        }>Contact Us</NavLink></li>
+
+       <li><NavLink to='/register'>Register</NavLink></li>
        
     </>
 
@@ -94,7 +96,7 @@ const Navbar = () => {
 
 
 
-    <a className="btn">Login</a>
+    <a className="btn bg-[#AACBFF] font-bold text-[#007CFF]">Login</a>
   </div>
 </div>
     );
