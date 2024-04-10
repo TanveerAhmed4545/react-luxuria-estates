@@ -1,4 +1,4 @@
-
+import demoUserPic from '../../assets/demoUser.png';
 import { useContext} from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
@@ -53,6 +53,13 @@ const Navbar = () => {
            ? "pending"
            : "mr-3"
        }>Contact Us</NavLink></li>
+       <li><NavLink to='/userProfile'  className={({ isActive, isPending }) =>
+         isActive
+           ? "bg-none border text-[#007CFF] font-semibold border-[#AACBFF] mr-3"
+           : isPending
+           ? "pending"
+           : "mr-3"
+       }>User Profile</NavLink></li>
 
        
        
@@ -111,7 +118,7 @@ const Navbar = () => {
         <div className="w-10 rounded-full">
           
           <Tooltip content={user?.displayName}>
-          <img  src={user?.photoURL} />
+          <img  src={user?.photoURL? user?.photoURL : demoUserPic} />
     </Tooltip>
         </div>
       </div> } 
