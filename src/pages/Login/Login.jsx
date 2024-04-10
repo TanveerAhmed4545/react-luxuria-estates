@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
-import { FaEyeSlash } from "react-icons/fa";
+import { FaEyeSlash, FaGoogle } from "react-icons/fa";
 import { IoMdEye } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
@@ -9,7 +9,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 const Login = () => {
 
     const [showPassword,setShowPassword] = useState(false);
-    const {signIn} = useContext(AuthContext);
+    const {signIn,googleLogin} = useContext(AuthContext);
 
     const {
         register,
@@ -77,9 +77,17 @@ const Login = () => {
       <button className="btn bg-[#007CFF] border-none text-white">Login</button>
     </div>
   </form>
+  <div className="px-8 pt-6">
+     <button onClick={() => googleLogin()} className="btn bg-[#3878E5] border-none text-white w-full">
+        <FaGoogle></FaGoogle>
+          Google
+        </button>
+     </div>
   <div className="text-center py-4">
      <p>Do not have an account <Link className="text-blue-600 font-bold" to='/register'>Register</Link></p>
      </div>
+
+     
 </div>
 </div>
 </div>
