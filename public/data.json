@@ -1,0 +1,76 @@
+[
+    {
+        "estate_title": "Oceanfront Luxury Villa",
+        "id": 1,
+        "segment_name": "Beachfront properties",
+        "description": "Own your slice of paradise with this oceanfront luxury villa, featuring stunning views, private beach access, and resort-style amenities.",
+        "price": "$2,500,000",
+        "status": "sale",
+        "location": "Maui, Hawaii",
+        "facilities": ["Private beachfront", "Infinity pool", "Poolside cabana", "Gourmet kitchen"],
+        "image": "https://i.ibb.co/cQqHjpT/Oceanfront-1.jpg",
+        "area_sq_ft": 3500
+    },
+    {
+        "estate_title": "Ski-In/Ski-Out Chalet",
+        "id": 2,
+        "segment_name": "Resorts",
+        "description": "Experience ultimate convenience at this ski-in/ski-out chalet, offering direct access to the slopes and luxurious amenities for après-ski relaxation.",
+        "price": "$400 per night",
+        "status": "rent",
+        "location": "Whistler, British Columbia, Canada",
+        "facilities": ["Ski-in/ski-out access", "Hot tub", "Sauna", "Mountain views"],
+        "image": "https://i.ibb.co/4Wmz7cH/Ski-In.jpg",
+        "area_sq_ft": 4200
+    },
+    {
+        "estate_title": "Exclusive Penthouse Retreat",
+        "id": 3,
+        "segment_name": "Penthouse",
+        "description": "Elevate your lifestyle with this exclusive penthouse retreat offering panoramic city views, luxurious interiors, and private rooftop terrace.",
+        "price": "$7,000,000",
+        "status": "sale",
+        "location": "New York City, New York",
+        "facilities": ["Private elevator", "Floor-to-ceiling windows", "Home automation system", "Skyline views"],
+        "image": "https://i.ibb.co/7KTbr5B/penthouse.jpg",
+        "area_sq_ft": 5000
+    },
+    {
+        "estate_title": "Luxury Beachfront Resort",
+        "id": 4,
+        "segment_name": "Beachfront properties",
+        "description": "Indulge in luxury at this beachfront resort offering upscale accommodations, gourmet dining, and a plethora of recreational activities.",
+        "price": "$500 per night",
+        "status": "rent",
+        "location": "Maui, Hawaii",
+        "facilities": ["Private beach access", "Infinity pool", "Spa", "Fine dining restaurant"],
+        "image": "https://i.ibb.co/6yS10Cs/light-view-nature.jpg",
+        "area_sq_ft": 5400
+    },
+    {
+        "estate_title": "Private Island Paradise",
+        "id": 5,
+        "segment_name": "Private islands",
+        "description": "Escape to your own private island paradise with pristine beaches, lush landscapes, and endless possibilities for development.",
+        "price": "$15,000,000",
+        "status": "sale",
+        "location": "Caribbean",
+        "facilities": ["Exclusive privacy", "Tropical vegetation", "Crystal-clear waters", "Helipad"],
+        "image": "https://i.ibb.co/10B9rRt/private.jpg",
+        "area_sq_ft": 4500
+    },
+    {
+        "estate_title": "Cozy Mountain Lodge",
+        "id": 6,
+        "segment_name": "Penthouse",
+        "description": "Experience the charm of a rustic mountain lodge with cozy accommodations, breathtaking views, and easy access to outdoor adventures.",
+        "price": "$200 per night",
+        "status": "rent",
+        "location": "Banff, Alberta, Canada",
+        "facilities": ["Mountain views", "Fireplace", "Hiking trails", "Hot tub"],
+        "image": "https://i.ibb.co/hW64q1z/mountain.jpg",
+        "area_sq_ft": 2800
+    }
+    
+    
+]

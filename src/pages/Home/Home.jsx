@@ -1,9 +1,21 @@
+import Banner from "./Banner/Banner";
+import { useLoaderData } from "react-router-dom";
+import Estates from "./Estates/Estates";
 
 
 const Home = () => {
+    const estates = useLoaderData();
+    console.log(estates);
     return (
         <div>
-            <h2>This is a Home</h2>
+         <Banner></Banner>
+         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+            {
+                estates.map(estate => <Estates key={estate.id} estate={estate}></Estates>)
+            }
+            </div>   
+         
+
         </div>
     );
 };
