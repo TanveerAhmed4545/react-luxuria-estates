@@ -1,13 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEyeSlash } from "react-icons/fa";
 import { IoMdEye } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 
 const Login = () => {
 
     const [showPassword,setShowPassword] = useState(false);
+    const {signIn} = useContext(AuthContext);
 
     const {
         register,
@@ -19,7 +21,14 @@ const Login = () => {
 
       const onSubmit = (data) => {
         
-        console.log(data)
+        console.log(data);
+        signIn(data.email,data.password)
+        .then(result =>{
+          console.log(result.user);
+        })
+        .catch(error =>{
+          console.log(error);
+        })
     }
 
 
