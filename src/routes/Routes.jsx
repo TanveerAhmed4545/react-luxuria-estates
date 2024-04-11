@@ -7,6 +7,7 @@ import Register from "../pages/Register/Register";
 import Login from "../pages/Login/Login";
 import UserProfile from "../pages/UserProfile/UserProfile";
 import EstateDetails from "../pages/EstateDetails/EstateDetails";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -24,12 +25,16 @@ const router = createBrowserRouter([
             },
             {
                 path: '/estateDetails/:id',
-                element: <EstateDetails></EstateDetails>,
+                element: <PrivateRoute>
+                    <EstateDetails></EstateDetails>
+                </PrivateRoute>,
                 loader: () =>fetch('/data.json')
             },
             {
                 path: '/profile',
-                element: <UpdateProfile></UpdateProfile>,
+                element: <PrivateRoute>
+                    <UpdateProfile></UpdateProfile>
+                </PrivateRoute>,
             },
             {
                 path: '/contact',
@@ -37,7 +42,9 @@ const router = createBrowserRouter([
             },
             {
                 path: '/userProfile',
-                element: <UserProfile></UserProfile>,
+                element: <PrivateRoute>
+                    <UserProfile></UserProfile>
+                </PrivateRoute> ,
             },
             {
                 path: '/login',

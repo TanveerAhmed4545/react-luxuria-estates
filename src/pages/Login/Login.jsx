@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEyeSlash, FaGoogle } from "react-icons/fa";
 import { IoMdEye } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link,useLocation ,useNavigate} from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 
@@ -10,6 +10,9 @@ const Login = () => {
 
     const [showPassword,setShowPassword] = useState(false);
     const {signIn,googleLogin} = useContext(AuthContext);
+    const location = useLocation();
+    console.log("loaction in the login page", location);
+    const navigate = useNavigate();
 
     const {
         register,
@@ -25,10 +28,23 @@ const Login = () => {
         signIn(data.email,data.password)
         .then(result =>{
           console.log(result.user);
+
+          // navigate after login
+          navigate(location?.state ? location.state : '/');
+
         })
         .catch(error =>{
           console.log(error);
         })
+    }
+
+
+    const handleSocialLogin = socialProvider =>{
+      socialProvider()
+      .then(result =>{
+        console.log(result.user);
+        navigate(location?.state ? location.state : '/');
+      })
     }
 
 
@@ -78,7 +94,7 @@ const Login = () => {
     </div>
   </form>
   <div className="px-8 pt-6">
-     <button onClick={() => googleLogin()} className="btn bg-[#1DB2FF] border-none text-white w-full">
+     <button onClick={() => handleSocialLogin(googleLogin)} className="btn bg-[#1DB2FF] border-none text-white w-full">
         <FaGoogle></FaGoogle>
           Google
         </button>
