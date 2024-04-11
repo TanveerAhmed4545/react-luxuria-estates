@@ -7,7 +7,7 @@ const UserProfile = () => {
     const {user} = useContext(AuthContext);
 
   return (
-    <div className="hero py-6 md:py-9 lg:py-12 rounded-2xl bg-[#dbe7f9]">
+    <div className="hero py-6 md:py-9 lg:py-12 rounded-2xl bg-[#7DD6FE] my-5 lg:my-10">
       <div className="hero-content text-center">
         <div className="max-w-md">
           <div className="card bg-base-100 shadow-xl p-6">

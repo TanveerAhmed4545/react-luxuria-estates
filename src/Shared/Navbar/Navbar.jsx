@@ -34,31 +34,32 @@ const Navbar = () => {
     const links = <>
     <li><NavLink  to='/'  className={({ isActive, isPending }) =>
          isActive
-           ? "bg-none border text-[#007CFF] font-semibold border-[#AACBFF] mr-3"
+           ? "bg-none border text-[#1DB2FF] font-semibold border-[#AACBFF] mr-3"
            : isPending
            ? "pending"
-           : "mr-3"
+           : "mr-3 font-semibold"
        }>Home</NavLink></li>
-       <li><NavLink  to='/profile'  className={({ isActive, isPending }) =>
-         isActive
-           ? "bg-none border text-[#007CFF] font-semibold border-[#AACBFF] mr-3"
-           : isPending
-           ? "pending"
-           : "mr-3"
-       }>Update Profile</NavLink></li>
+       
        <li><NavLink to='/contact'  className={({ isActive, isPending }) =>
          isActive
-           ? "bg-none border text-[#007CFF] font-semibold border-[#AACBFF] mr-3"
+           ? "bg-none border text-[#1DB2FF] font-semibold border-[#AACBFF] mr-3"
            : isPending
            ? "pending"
-           : "mr-3"
+           : "mr-3 font-semibold"
        }>Contact Us</NavLink></li>
+       <li><NavLink  to='/profile'  className={({ isActive, isPending }) =>
+         isActive
+           ? "bg-none border text-[#1DB2FF] font-semibold border-[#AACBFF] mr-3"
+           : isPending
+           ? "pending"
+           : "mr-3 font-semibold"
+       }>Update Profile</NavLink></li>
        <li><NavLink to='/userProfile'  className={({ isActive, isPending }) =>
          isActive
-           ? "bg-none border text-[#007CFF] font-semibold border-[#AACBFF] mr-3"
+           ? "bg-none border text-[#1DB2FF] font-semibold border-[#AACBFF] mr-3"
            : isPending
            ? "pending"
-           : "mr-3"
+           : "mr-3 font-semibold"
        }>User Profile</NavLink></li>
 
        
@@ -146,8 +147,8 @@ const Navbar = () => {
 
    
     {
-        user ? <button onClick={handleSignOut} className="btn bg-[#AACBFF] font-bold text-[#007CFF]">Sign Out</button> : <Link  to='/login'>
-        <button  className="btn bg-[#AACBFF] font-bold text-[#007CFF]" >Login</button>
+        user ? <button onClick={handleSignOut} className="btn bg-[#1DB2FF] font-bold text-white">Sign Out</button> : <Link  to='/login'>
+        <button  className="btn bg-[#1DB2FF] font-bold text-white" >Login</button>
     </Link>
       }
     

@@ -34,7 +34,7 @@ const Login = () => {
 
     return (
         <div>
-        <div className="hero min-h-screen bg-[#dbe7f9] rounded-xl">
+        <div className="hero min-h-screen bg-[#7DD6FE] rounded-xl">
 <div className="hero-content  flex-col lg:flex-row-reverse">
 <div className="text-center lg:text-left ml-0 lg:ml-10">
   {/* <h1 className="text-5xl font-bold mb-5  text-[#007CFF]">Login now </h1> */}
@@ -42,10 +42,10 @@ const Login = () => {
     <img className="rounded-2xl" src={"https://i.ibb.co/1X4y5H1/log.jpg"}  />
   </div>
 </div>
-<div className="card shrink-0 w-full   max-w-md shadow-2xl bg-[#AACBFF]">
+<div className="card shrink-0 w-full   max-w-md shadow-2xl bg-[#E7F6FD]">
   <form className="card-body pb-0 " onSubmit={handleSubmit(onSubmit)} >
     
-  <h1 className="text-5xl font-bold mb-5  text-[#007CFF]">Login now </h1>
+  <h1 className="text-5xl font-bold mb-5  text-blue-gray-700">Login now </h1>
     
     <div className="form-control ">
       <label className="label">
@@ -78,7 +78,7 @@ const Login = () => {
     </div>
   </form>
   <div className="px-8 pt-6">
-     <button onClick={() => googleLogin()} className="btn bg-[#3878E5] border-none text-white w-full">
+     <button onClick={() => googleLogin()} className="btn bg-[#1DB2FF] border-none text-white w-full">
         <FaGoogle></FaGoogle>
           Google
         </button>
