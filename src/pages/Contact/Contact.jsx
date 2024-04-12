@@ -10,7 +10,7 @@ const Contact = () => {
             Get In Touch
           </h2>
           <p className="text-neutral-900 pt-6 w-full mx-auto lg:w-9/12">
-            Welcome to the heart of our Book community!{" "}
+            Welcome to the heart of our Luxuria Estates community!{" "}
           </p>
         </div>
   
