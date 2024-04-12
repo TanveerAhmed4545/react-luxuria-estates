@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 
 const Register = () => {
-    const {createUser} = useContext(AuthContext);
+    const {createUser,setReload} = useContext(AuthContext);
     // console.log(createUser);
       
     // showPassword
@@ -46,6 +46,7 @@ const Register = () => {
             })
             .then(()=>{
                 console.log("update");
+                setReload(true);
             })
             .catch((error)=>{
                 console.log(error);

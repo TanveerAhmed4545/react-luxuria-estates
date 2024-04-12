@@ -10,7 +10,7 @@ const googleProvider = new GoogleAuthProvider();
 
 // eslint-disable-next-line react/prop-types
 const AuthProvider = ({children}) => {
-     
+     const [reload,setReload] = useState(false);
     const [user,setUser] = useState([]);
     const [loading,setLoading] = useState(true);
     
@@ -50,7 +50,7 @@ const AuthProvider = ({children}) => {
         return () =>{
             unSubscribe();
         }
-    },[]);
+    },[reload]);
 
 
     const authInfo = {
@@ -59,7 +59,8 @@ const AuthProvider = ({children}) => {
         signIn,
         loading,
         logOut,
-        googleLogin
+        googleLogin,
+        setReload
 
     };
     return (
