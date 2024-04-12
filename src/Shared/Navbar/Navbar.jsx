@@ -12,7 +12,7 @@ const Navbar = () => {
      
     if(loading){
       return <div className="flex justify-center items-center">
-        <span className="loading loading-infinity loading-lg"></span>
+        <span className="loading loading-infinity loading-lg text-[#1DB2FF]"></span>
       </div>
    }
 

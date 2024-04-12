@@ -11,7 +11,7 @@ const Login = () => {
     const [showPassword,setShowPassword] = useState(false);
     const {signIn,googleLogin} = useContext(AuthContext);
     const location = useLocation();
-    console.log("loaction in the login page", location);
+    // console.log("loaction in the login page", location);
     const navigate = useNavigate();
 
     const {

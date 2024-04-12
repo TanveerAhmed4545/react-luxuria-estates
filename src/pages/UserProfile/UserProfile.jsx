@@ -20,7 +20,7 @@ const UserProfile = () => {
             <div  className="space-y-5">
               <h2 className="card-title pt-5">Name : <span>{user?.displayName}</span></h2>
               <p className="card-title">Email : <span>{user?.email}</span></p>
-              <p className="card-title ">Photo Url : <span className="break-all">{user?.photoURL}</span></p>
+              <p className="card-title flex flex-col"><span>Photo Url :</span> <span className="break-all">{user?.photoURL}</span></p>
               
             </div>
           </div>
