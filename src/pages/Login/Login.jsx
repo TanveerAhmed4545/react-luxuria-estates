@@ -50,7 +50,7 @@ const Login = () => {
 
     return (
         <div>
-        <div className="hero min-h-screen bg-[#7DD6FE] rounded-xl">
+        <div className="hero min-h-screen bg-[#7DD6FE] ">
 <div className="hero-content  flex-col lg:flex-row-reverse">
 <div className="text-center lg:text-left ml-0 lg:ml-10">
   {/* <h1 className="text-5xl font-bold mb-5  text-[#007CFF]">Login now </h1> */}

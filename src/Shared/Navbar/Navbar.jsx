@@ -3,6 +3,8 @@ import { useContext} from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Tooltip } from "@material-tailwind/react";
+import { toast } from 'react-toastify';
+
 
 
 const Navbar = () => {
@@ -21,10 +23,12 @@ const Navbar = () => {
 
       logOut()
       .then(result =>{
-        console.log(result.user);
+        console.log(result);
+         toast.success('Logout Completed');
       })
       .catch(error =>{
         console.log(error);
+          toast.warn("Error");
       })
 
     }
@@ -67,7 +71,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 rounded-xl">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -79,7 +83,7 @@ const Navbar = () => {
         }
       </ul>
     </div>
-    <a className=" text-xl">Luxuria <span>Estates</span></a>
+    <a className="">  <span className='font-semibold mr-1 text-xl lg:text-2xl text-[#1DB2FF]'>Luxuria</span> <span className='font-semibold text-lg lg:text-xl  text-[#1DB2FF]'>Estates</span></a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">

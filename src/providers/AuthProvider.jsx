@@ -5,6 +5,7 @@ import app from '../firebase/firebase.config';
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
 // console.log(auth);
+// social auth provider
 const googleProvider = new GoogleAuthProvider();
 
 
