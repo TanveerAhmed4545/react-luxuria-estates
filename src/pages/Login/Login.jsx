@@ -51,7 +51,8 @@ const Login = () => {
         navigate(location?.state ? location.state : '/');
       })
       .then(error =>{
-        console.log(error);
+        // console.log(error);
+        error && toast.warn("Login Error");
       })
     }
 
@@ -61,15 +62,15 @@ const Login = () => {
         <div className="hero min-h-screen bg-[#7DD6FE] ">
 <div className="hero-content  flex-col lg:flex-row-reverse">
 <div className="text-center lg:text-left ml-0 lg:ml-10">
-  {/* <h1 className="text-5xl font-bold mb-5  text-[#007CFF]">Login now </h1> */}
-  <div className=" max-w-[500px] md:md:max-w-md lg:max-w-[550px]  ">
-    <img className="rounded-2xl" src={"https://i.ibb.co/1X4y5H1/log.jpg"}  />
+  <h1 className="text-5xl font-bold mb-5  text-blue-gray-700">Login now </h1>
+  <div className=" max-w-[500px] md:md:max-w-md lg:max-w-[570px]  ">
+    <img data-aos="zoom-in" data-aos-duration="1000" className="rounded-2xl" src={"https://i.ibb.co/1X4y5H1/log.jpg"}  />
   </div>
 </div>
 <div className="card shrink-0 w-full   max-w-md shadow-2xl bg-[#E7F6FD]">
   <form className="card-body pb-0 " onSubmit={handleSubmit(onSubmit)} >
     
-  <h1 className="text-5xl font-bold mb-5  text-blue-gray-700">Login now </h1>
+  {/* <h1 className="text-5xl font-bold mb-5  text-blue-gray-700">Login now </h1> */}
     
     <div className="form-control ">
       <label className="label">

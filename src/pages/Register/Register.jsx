@@ -6,6 +6,9 @@ import { toast } from 'react-toastify';
 import { FaEyeSlash } from "react-icons/fa";
 import { IoMdEye } from "react-icons/io";
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 
 const Register = () => {
@@ -66,7 +69,7 @@ const Register = () => {
     <div className="text-center lg:text-left  lg:ml-10">
       <h1 className="text-5xl font-bold mb-6 lg:mb-8 text-blue-gray-700">Register now </h1>
       <div className=" max-w-[600px] md:max-w-md lg:max-w-[600px]">
-        <img className="rounded-2xl" src={"https://i.ibb.co/KXk84XP/reg.jpg"}  />
+        <img data-aos="zoom-in" data-aos-duration="1000"   className="rounded-2xl" src={"https://i.ibb.co/KXk84XP/reg.jpg"}  />
       </div>
     </div>
     <div className="card shrink-0 w-full max-w-md shadow-2xl bg-[#E7F6FD]">
