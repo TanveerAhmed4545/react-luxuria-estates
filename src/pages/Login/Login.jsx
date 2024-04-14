@@ -4,12 +4,14 @@ import { FaEyeSlash, FaGoogle } from "react-icons/fa";
 import { IoMdEye } from "react-icons/io";
 import { Link,useLocation ,useNavigate} from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import { toast } from "react-toastify";
+import { FaGithub } from "react-icons/fa";
 
 
 const Login = () => {
 
     const [showPassword,setShowPassword] = useState(false);
-    const {signIn,googleLogin} = useContext(AuthContext);
+    const {signIn,googleLogin,githubLogin} = useContext(AuthContext);
     const location = useLocation();
     // console.log("loaction in the login page", location);
     const navigate = useNavigate();
@@ -27,14 +29,16 @@ const Login = () => {
         console.log(data);
         signIn(data.email,data.password)
         .then(result =>{
-          console.log(result.user);
-
+          // console.log(result.user);
+          result.user &&  toast.success("Login Successfully");
           // navigate after login
           navigate(location?.state ? location.state : '/');
+         
 
         })
         .catch(error =>{
-          console.log(error);
+          // console.log(error);
+          error && toast.warn("Login Error");
         })
     }
 
@@ -42,8 +46,12 @@ const Login = () => {
     const handleSocialLogin = socialProvider =>{
       socialProvider()
       .then(result =>{
-        console.log(result.user);
+        // console.log(result.user);
+        result.user &&  toast.success("Login Successfully");
         navigate(location?.state ? location.state : '/');
+      })
+      .then(error =>{
+        console.log(error);
       })
     }
 
@@ -97,6 +105,12 @@ const Login = () => {
      <button onClick={() => handleSocialLogin(googleLogin)} className="btn bg-[#1DB2FF] border-none text-white w-full">
         <FaGoogle></FaGoogle>
           Google
+        </button>
+     </div>
+     <div className="px-8 pt-6">
+     <button onClick={() => handleSocialLogin(githubLogin)} className="btn bg-black border-none text-white w-full">
+        <FaGithub></FaGithub>
+          Github
         </button>
      </div>
   <div className="text-center py-4">

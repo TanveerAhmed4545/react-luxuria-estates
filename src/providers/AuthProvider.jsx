@@ -1,12 +1,14 @@
-import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { GoogleAuthProvider,GithubAuthProvider , createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import app from '../firebase/firebase.config';
+
 
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
 // console.log(auth);
 // social auth provider
 const googleProvider = new GoogleAuthProvider();
+const githubProvider = new GithubAuthProvider();
 
 
 // eslint-disable-next-line react/prop-types
@@ -31,6 +33,12 @@ const AuthProvider = ({children}) => {
     const googleLogin = () =>{
         setLoading(true);
         return signInWithPopup(auth,googleProvider);
+    } 
+
+    // githubLogin
+    const githubLogin = () =>{
+        setLoading(true);
+        return signInWithPopup(auth,githubProvider);
     } 
 
     // logOut
@@ -61,7 +69,8 @@ const AuthProvider = ({children}) => {
         loading,
         logOut,
         googleLogin,
-        setReload
+        setReload,
+        githubLogin
 
     };
     return (

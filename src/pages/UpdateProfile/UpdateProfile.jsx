@@ -17,7 +17,7 @@ const UpdateProfile = () => {
       } = useForm()
     
       const onSubmit = (data) => {
-        console.log(data)
+        // console.log(data)
         
         updateProfile(user,{
             displayName: data.name,

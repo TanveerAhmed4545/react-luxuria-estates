@@ -37,7 +37,7 @@ const Register = () => {
         //  console.log(data)
          createUser(data.email,data.password)
          .then(result =>{
-            console.log(result.user);
+            // console.log(result.user);
             result.user && toast.success("Successfully Register");
 
             updateProfile(result.user,{
@@ -53,7 +53,7 @@ const Register = () => {
             })
          })
          .catch(error=>{
-           console.log(error);
+          //  console.log(error);
            error && toast.warn("Error , not registered");
          })
         }
