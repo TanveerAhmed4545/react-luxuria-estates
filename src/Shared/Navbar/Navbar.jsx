@@ -119,7 +119,7 @@ const Navbar = () => {
 </div> */}
 
 
-  { user && <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+  { user && <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar mr-2">
         <div className="w-10 rounded-full">
           
           <Tooltip content={user?.displayName}>

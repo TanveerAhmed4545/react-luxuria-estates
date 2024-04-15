@@ -30,7 +30,7 @@ const UpdateProfile = () => {
         })
         .catch((error)=>{
             console.log(error);
-            toast.warning("Error");
+            error &&  toast.warning("Error, not Updated");
         })
 
     }

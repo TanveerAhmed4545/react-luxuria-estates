@@ -101,13 +101,13 @@ const Contact = () => {
         </form>
 
         <div className="rounded-2xl border border-neutral-900 border-opacity-10 lg:p-12 p-5 lg:basis-2/5 basis-full">
-          <div className="p-6 bg-lime-300 bg-opacity-10 rounded-2xl">
+          <div className="p-6 bg-blue-400 bg-opacity-10 rounded-2xl">
             <FaPhoneAlt className="text-2xl text-[#1DB2FF]"></FaPhoneAlt>
             <p className="pt-6">Phone Number :</p>
             <h3 className="font-bold pt-3">(+62) 123-821-543</h3>
           </div>
 
-          <div className="p-6 bg-amber-300 bg-opacity-10 rounded-2xl my-6">
+          <div className="p-6 bg-blue-400 bg-opacity-10 rounded-2xl my-6">
             <MdEmail className="text-2xl text-[#1DB2FF]"></MdEmail>
             <p className="pt-6">Email :</p>
             <h3 className="font-bold pt-3">book@support.com</h3>
