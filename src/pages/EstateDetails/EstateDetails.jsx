@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useParams,useLoaderData } from "react-router-dom";
 
 const EstateDetails = () => {
@@ -10,7 +11,12 @@ const EstateDetails = () => {
     console.log(details);
     const {segment_name,estate_title,price,status,image,location,description,area_sq_ft,facilities} = details;
     return (
-        <div className="card lg:card-side   hover:shadow-xl hover:shadow-[#acd0e0]   my-5 lg:my-10">
+        <div className="card lg:card-side   hover:shadow-xl hover:shadow-[#acd0e0]   my-5 lg:my-10 mx-5">
+            <Helmet>
+                <title>
+                      Luxuria Estates || Estate Details
+                </title>
+            </Helmet>
   <div className=" lg:w-3/4 lg:h-full">
   <figure><img className="rounded-2xl lg:h-screen lg:w-full" src={image}/></figure>
   

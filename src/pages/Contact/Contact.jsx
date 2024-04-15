@@ -1,10 +1,16 @@
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { IoLocation } from "react-icons/io5";
+import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
     return (
       <div className=" my-5 lg:my-9">
+        <Helmet>
+          <title>
+          Luxuria Estates || Contact  
+          </title>
+        </Helmet>
         
   
       <div className="text-center py-8 border-dashed border border-x-0">

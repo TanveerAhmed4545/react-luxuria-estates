@@ -1,9 +1,15 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 
 const ErrorPage = () => {
     return (
         <div className="flex  flex-col my-5">
+            <Helmet>
+                <title>
+                Luxuria Estates || ErrorPage 
+                </title>
+            </Helmet>
             
         <div className="w-full  ">
             <img className="rounded-2xl mx-auto" src={'https://i.ibb.co/3fg24ND/404-sorry.jpg'}  />

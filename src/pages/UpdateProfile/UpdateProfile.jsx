@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { AuthContext } from "../../providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 
 const UpdateProfile = () => {
@@ -36,6 +37,12 @@ const UpdateProfile = () => {
 
     return (
         <div className="flex justify-center my-5 md:my-10 lg:my-16">
+
+          <Helmet>
+            <title>
+           Luxuria Estates || Update Profile 
+            </title>
+          </Helmet>
             
             <div className="lg:w-2/3 md:w-3/4 w-full p-5">
             <h2 className="text-center text-2xl md:text-5xl font-semibold">Update Profile</h2>

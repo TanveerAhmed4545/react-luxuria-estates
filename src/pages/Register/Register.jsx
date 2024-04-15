@@ -8,6 +8,7 @@ import { IoMdEye } from "react-icons/io";
 import { Link } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Helmet } from "react-helmet-async";
 AOS.init();
 
 
@@ -64,6 +65,11 @@ const Register = () => {
 
     return (
         <div>
+          <Helmet>
+            <title>
+             Luxuria Estates || Register 
+            </title>
+          </Helmet>
             <div className="hero min-h-screen bg-[#7DD6FE] ">
   <div className="hero-content  flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left  lg:ml-10">

@@ -6,6 +6,7 @@ import { Link,useLocation ,useNavigate} from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { toast } from "react-toastify";
 import { FaGithub } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 
 const Login = () => {
@@ -59,6 +60,11 @@ const Login = () => {
 
     return (
         <div>
+          <Helmet>
+            <title>
+            Luxuria Estates || Login  
+            </title>
+          </Helmet>
         <div className="hero min-h-screen bg-[#7DD6FE] ">
 <div className="hero-content  flex-col lg:flex-row-reverse">
 <div className="text-center lg:text-left ml-0 lg:ml-10">

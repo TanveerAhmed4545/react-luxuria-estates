@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import demoUserPic from '../../assets/demoUser.png';
+import { Helmet } from "react-helmet-async";
 
 const UserProfile = () => {
 
@@ -8,6 +9,11 @@ const UserProfile = () => {
 
   return (
     <div className="mx-6">
+      <Helmet>
+        <title>
+        Luxuria Estates || User Profile 
+        </title>
+      </Helmet>
       <div className="hero py-6 md:py-9 lg:py-12  rounded-2xl bg-[#9cb4c0] my-5 lg:my-10">
       <div className="hero-content text-center">
         <div className="max-w-md">
