@@ -111,8 +111,8 @@ const Contact = () => {
                 Message
               </span>{" "}
               <br />
-              <textarea className="mt-4 w-full p-5 pb-36 lg:pb-64 rounded-xl border-0 outline-0 bg-[#ECF6FE] text-[#9CA3AF] resize-none">
-                Write your message
+              <textarea className="mt-4 w-full p-5 pb-36 lg:pb-64 rounded-xl border-0 outline-0 bg-[#ECF6FE] text-[#9CA3AF] resize-none" placeholder="Write your message">
+                
               </textarea>
             </label>
 

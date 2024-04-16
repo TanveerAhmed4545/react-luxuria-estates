@@ -5,7 +5,7 @@ import { updateProfile } from "firebase/auth";
 import { toast } from 'react-toastify';
 import { FaEyeSlash } from "react-icons/fa";
 import { IoMdEye } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Helmet } from "react-helmet-async";
@@ -18,6 +18,8 @@ const Register = () => {
       
     // showPassword
     const [showPassword,setShowPassword] = useState(false);
+
+    const navigate = useNavigate();
 
 
 
@@ -55,6 +57,8 @@ const Register = () => {
             .catch((error)=>{
                 console.log(error);
             })
+
+            navigate('/');
          })
          .catch(error=>{
           //  console.log(error);
@@ -128,7 +132,7 @@ const Register = () => {
         </div>
       </form>
       <div className="text-center py-4">
-     <p>Already have an account <Link className="text-blue-600 font-bold" to='/login'>Login</Link></p>
+     <p>Already have an account ? <Link className="text-blue-600 font-bold" to='/login'>Login</Link></p>
      </div>
     </div>
   </div>

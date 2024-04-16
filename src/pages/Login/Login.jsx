@@ -39,7 +39,7 @@ const Login = () => {
         })
         .catch(error =>{
           // console.log(error);
-          error && toast.warn("Login Error");
+          error && toast.warn("Login Error, email or password incorrect");
         })
     }
 
@@ -121,7 +121,7 @@ const Login = () => {
         </button>
      </div>
   <div className="text-center py-4">
-     <p>Do not have an account <Link className="text-blue-600 font-bold" to='/register'>Register</Link></p>
+     <p>Do not have an account ? <Link className="text-blue-600 font-bold" to='/register'>Register</Link></p>
      </div>
 
      

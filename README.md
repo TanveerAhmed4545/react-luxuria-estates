@@ -1,8 +1,19 @@
-# React + Vite
+# Luxuria Estates
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Live Server: 
+ 
+- 📝 This is a Real Estates  related website.
+- 📝 This website design create by myself.
+- 📝 This website is built with React library and also React router.
+- 📝 This website is built with tailwind css library .
+- 📝 This website mainly has 3 pages. Home/ Listed Books / Pages to Read.
+- 📝 The Home Page contain home banner, Estates card and footer.
+- 📝 And the external json data has been created by me and that data has been used for this Website.
+- 📝 Also use daisyUi .
 
-Currently, two official plugins are available:
+## Packages
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- AOS Package
+- React-leaflet
+- React Hook form
+- Swiper slider

@@ -58,13 +58,15 @@ const Navbar = () => {
            ? "pending"
            : "mr-3 font-semibold"
        }>Update Profile</NavLink></li>
-       <li><NavLink to='/userProfile'  className={({ isActive, isPending }) =>
-         isActive
-           ? "bg-none border text-[#1DB2FF] font-semibold border-[#AACBFF] mr-3"
-           : isPending
-           ? "pending"
-           : "mr-3 font-semibold"
-       }>User Profile</NavLink></li>
+       {
+        user && <li><NavLink to='/userProfile'  className={({ isActive, isPending }) =>
+        isActive
+          ? "bg-none border text-[#1DB2FF] font-semibold border-[#AACBFF] mr-3"
+          : isPending
+          ? "pending"
+          : "mr-3 font-semibold"
+      }>User Profile</NavLink></li>
+       }
 
        
        
@@ -122,8 +124,8 @@ const Navbar = () => {
   { user && <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar mr-2">
         <div className="w-10 rounded-full">
           
-          <Tooltip content={user?.displayName}>
-          <img  src={user?.photoURL? user?.photoURL : demoUserPic} />
+          <Tooltip content={user?.displayName }>
+          <img  src={user?.photoURL ? user.photoURL : demoUserPic} />
     </Tooltip>
         </div>
       </div> } 
