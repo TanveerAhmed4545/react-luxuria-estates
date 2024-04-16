@@ -38,7 +38,7 @@ const Navbar = () => {
     const links = <>
     <li><NavLink  to='/'  className={({ isActive, isPending }) =>
          isActive
-           ? "bg-none border text-[#1DB2FF] font-semibold border-[#AACBFF] mr-3"
+           ? "bg-none border bg-[#1DB2FF]  font-semibold border-[#AACBFF] mr-3"
            : isPending
            ? "pending"
            : "mr-3 font-semibold"
@@ -46,14 +46,14 @@ const Navbar = () => {
        
        <li><NavLink to='/contact'  className={({ isActive, isPending }) =>
          isActive
-           ? "bg-none border text-[#1DB2FF] font-semibold border-[#AACBFF] mr-3"
+           ? "bg-none border bg-[#1DB2FF] font-semibold border-[#AACBFF] mr-3"
            : isPending
            ? "pending"
            : "mr-3 font-semibold"
        }>Contact Us</NavLink></li>
        <li><NavLink  to='/profile'  className={({ isActive, isPending }) =>
          isActive
-           ? "bg-none border text-[#1DB2FF] font-semibold border-[#AACBFF] mr-3"
+           ? "bg-none border bg-[#1DB2FF] font-semibold border-[#AACBFF] mr-3"
            : isPending
            ? "pending"
            : "mr-3 font-semibold"
@@ -61,7 +61,7 @@ const Navbar = () => {
        {
         user && <li><NavLink to='/userProfile'  className={({ isActive, isPending }) =>
         isActive
-          ? "bg-none border text-[#1DB2FF] font-semibold border-[#AACBFF] mr-3"
+          ? "bg-none border bg-[#1DB2FF] font-semibold border-[#AACBFF] mr-3"
           : isPending
           ? "pending"
           : "mr-3 font-semibold"

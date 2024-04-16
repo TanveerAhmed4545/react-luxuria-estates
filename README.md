@@ -8,6 +8,7 @@
 - 📝 This website is built with tailwind css library .
 - 📝 This website mainly has 4 pages. Home/ Contact Us / Update Profile / User Profile.
 - 📝 The Home Page contain home banner, Estates card and footer.
+- 📝  Authentication functionality has included in this website.
 - 📝 And the external json data has been created by me and that data has been used for this Website.
 - 📝 Also use daisyUi .
 

@@ -8,7 +8,7 @@ import { Helmet } from "react-helmet-async";
 
 const UpdateProfile = () => {
   const { user, setReload, setUser, updateUser } = useContext(AuthContext);
-  console.log(user);
+  // console.log(user);
 
   const {
     register,
