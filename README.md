@@ -1,6 +1,6 @@
 # Luxuria Estates
 
-## Live Server: 
+## Live Server: https://react-luxuria-estates.web.app/ 
  
 - 📝 This is a Real Estates  related website.
 - 📝 This website design create by myself.
