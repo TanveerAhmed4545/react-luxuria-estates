@@ -32,6 +32,8 @@ const Home = () => {
         </div>
 
      
+{/* meet our agent section */}
+
         <div className="text-center py-5 px-5">
         <h2 className="text-neutral-900 text-2xl lg:text-4xl font-extrabold">
         Meet Our
@@ -71,7 +73,9 @@ Agents
             
         </div>
 
-           
+
+      {/* our partner section  */}
+
         <div className="text-center py-5 px-5">
         <h2 className="text-neutral-900 text-2xl lg:text-4xl font-extrabold">
         Our

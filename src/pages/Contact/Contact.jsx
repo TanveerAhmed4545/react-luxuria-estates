@@ -4,8 +4,13 @@ import { IoLocation } from "react-icons/io5";
 import { Helmet } from "react-helmet-async";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import L from 'leaflet';
 
 const Contact = () => {
+  const customIcon = L.icon({
+    iconUrl: 'https://i.ibb.co/1z4RGm6/placeholder-684908-removebg-preview.png',
+    iconSize: [32, 32],
+  });
   return (
     <div className=" my-5 lg:my-9">
       <Helmet>
@@ -34,7 +39,7 @@ const Contact = () => {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <Marker position={[23.8759, 90.3795]}>
+          <Marker position={[23.8759, 90.3795]} icon={customIcon}>
             <Popup>
               A pretty CSS3 popup. <br /> Easily customizable.
             </Popup>
