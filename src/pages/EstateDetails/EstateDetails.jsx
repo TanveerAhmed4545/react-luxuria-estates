@@ -8,7 +8,7 @@ const EstateDetails = () => {
 
     const details = estateData.find(d => d.id === idInt);
     // console.log(typeof id);
-    console.log(details);
+    // console.log(details);
     const {segment_name,estate_title,price,status,image,location,description,area_sq_ft,facilities} = details;
     return (
         <div className="card    hover:shadow-xl hover:shadow-[#acd0e0]   my-5 lg:my-10 mx-5">

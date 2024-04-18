@@ -14,7 +14,7 @@ const Home = () => {
             </Helmet>
          <Banner></Banner>
         <div className="my-5 lg:my-10">
-        <div className="text-center py-8 border-dashed border border-x-0">
+        <div className="text-center py-8 ">
         <h2 className="text-neutral-900 text-2xl lg:text-4xl font-extrabold">
         Discover Latest Properties
         </h2>

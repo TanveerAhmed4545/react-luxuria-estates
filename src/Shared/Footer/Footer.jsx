@@ -5,7 +5,7 @@ import { FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <div className=" bg-[#e0f6fff2] ">
+        <div className="max-w-7xl mx-auto bg-[#e0f6fff2] ">
           <footer className="footer p-10 bg-[#e0f6fff2] text-base-content ">
   <nav>
     <h6 className="footer-title">Services</h6> 
