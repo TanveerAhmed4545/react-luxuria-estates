@@ -3,6 +3,8 @@
 ## Live Server: https://react-luxuria-estates.web.app/ 
 ## About
 Luxuria Estates is a premium real estate website designed by myself. Built with React, React Router, Tailwind CSS, and DaisyUI, it features Home, Contact Us, Update Profile, and User Profile pages. The Home Page includes a banner, Estates card, and footer. The site also offers secure authentication and utilizes custom external JSON data.
+## Technologies:
+React js, Firebase, Tailwind CSS, DaisyUI,React-leaflet, React Hook form
 ##  Features
 - 📝 This is a Real Estate-related website.
 - 📝 This website design is created by myself.
